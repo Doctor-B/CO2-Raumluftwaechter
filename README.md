@@ -9,7 +9,7 @@ Der CO2-Raumluftwächter misst mit Hilfe des SCD30 von Sensirion den CO2-Gehalt 
 * (optional) SD-Card Slot mit Echtzeituhr DS3231 mit Batteriepufferung CR1220 _[SMD]_
 * (optional) I2C OLED Display 128 x 64 (VCC GND vertauschbar per Lötbrücke) _[THT]_
 
-# License [Bilder/CC_BY-NC-SA.png]
+# License ![CC BY-NC-SA 4.0 Logo](/Bilder/CC_BY-NC-SA.png)
 
 The contents of this repository is released under the following license:
 
