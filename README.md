@@ -13,4 +13,4 @@ Der CO2-Raumluftwächter misst mit Hilfe des SCD30 von Sensirion den CO2-Gehalt 
 
 The contents of this repository is released under the following license:
 
-- the "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License" (CC BY-NC-SA 4.0) full text of this license is included in the [LICENSE.CC_NC-BY-SA-4.0](https://github.com/Doctor-B/CO2-Raumluftwaechter/blob/main/LICENSE.CC_NC-BY-SA) file and a copy can also be found at https://creativecommons.org/licenses/by-nc-sa/4.0/
+- the "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License" (CC BY-NC-SA 4.0) full text of this license is included in the [LICENSE.CC_NC-BY-SA-4.0](https://github.com/Doctor-B/CO2-Raumluftwaechter/main/LICENSE.CC_NC-BY-SA) file and a copy can also be found at https://creativecommons.org/licenses/by-nc-sa/4.0/
