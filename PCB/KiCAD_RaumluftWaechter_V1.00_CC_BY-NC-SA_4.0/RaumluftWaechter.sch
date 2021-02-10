@@ -1,0 +1,1490 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "CO2-Raumluftwächter"
+Date "2020-11-29"
+Rev "V1.00"
+Comp "CC BY-NC-SA 4.0"
+Comment1 "Dr. A. Beck"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:C_Small C1
+U 1 1 5F51EF31
+P 4450 1150
+F 0 "C1" H 4542 1196 50  0000 L CNN
+F 1 "100n" H 4542 1105 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 4450 1150 50  0001 C CNN
+F 3 "~" H 4450 1150 50  0001 C CNN
+	1    4450 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5F51FBE0
+P 3500 1750
+F 0 "R1" V 3293 1750 50  0000 C CNN
+F 1 "330R" V 3384 1750 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 3430 1750 50  0001 C CNN
+F 3 "~" H 3500 1750 50  0001 C CNN
+	1    3500 1750
+	0    1    1    0   
+$EndComp
+$Comp
+L LED:WS2812B D1
+U 1 1 5F523911
+P 4450 1750
+F 0 "D1" H 4550 2050 50  0000 L CNN
+F 1 "WS2812B" H 4600 1450 50  0000 L CNN
+F 2 "Usefull:LED_WS2812B-PLCC4_Handsoldering" H 4500 1450 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 4550 1375 50  0001 L TNN
+	1    4450 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 5F525C48
+P 5300 1150
+F 0 "C2" H 5392 1196 50  0000 L CNN
+F 1 "100n" H 5392 1105 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 5300 1150 50  0001 C CNN
+F 3 "~" H 5300 1150 50  0001 C CNN
+	1    5300 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D2
+U 1 1 5F525C52
+P 5300 1750
+F 0 "D2" H 5400 2050 50  0000 L CNN
+F 1 "WS2812B" H 5450 1450 50  0000 L CNN
+F 2 "Usefull:LED_WS2812B-PLCC4_Handsoldering" H 5350 1450 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 5400 1375 50  0001 L TNN
+	1    5300 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C3
+U 1 1 5F526970
+P 6150 1150
+F 0 "C3" H 6242 1196 50  0000 L CNN
+F 1 "100n" H 6242 1105 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 6150 1150 50  0001 C CNN
+F 3 "~" H 6150 1150 50  0001 C CNN
+	1    6150 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D3
+U 1 1 5F52697A
+P 6150 1750
+F 0 "D3" H 6250 2050 50  0000 L CNN
+F 1 "WS2812B" H 6300 1450 50  0000 L CNN
+F 2 "Usefull:LED_WS2812B-PLCC4_Handsoldering" H 6200 1450 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 6250 1375 50  0001 L TNN
+	1    6150 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C4
+U 1 1 5F5276A4
+P 7000 1150
+F 0 "C4" H 7092 1196 50  0000 L CNN
+F 1 "100n" H 7092 1105 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 7000 1150 50  0001 C CNN
+F 3 "~" H 7000 1150 50  0001 C CNN
+	1    7000 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D4
+U 1 1 5F5276AE
+P 7000 1750
+F 0 "D4" H 7100 2050 50  0000 L CNN
+F 1 "WS2812B" H 7150 1450 50  0000 L CNN
+F 2 "Usefull:LED_WS2812B-PLCC4_Handsoldering" H 7050 1450 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 7100 1375 50  0001 L TNN
+	1    7000 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C5
+U 1 1 5F52B06B
+P 7850 1150
+F 0 "C5" H 7942 1196 50  0000 L CNN
+F 1 "100n" H 7942 1105 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 7850 1150 50  0001 C CNN
+F 3 "~" H 7850 1150 50  0001 C CNN
+	1    7850 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D5
+U 1 1 5F52B075
+P 7850 1750
+F 0 "D5" H 7950 2050 50  0000 L CNN
+F 1 "WS2812B" H 8000 1450 50  0000 L CNN
+F 2 "Usefull:LED_WS2812B-PLCC4_Handsoldering" H 7900 1450 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 7950 1375 50  0001 L TNN
+	1    7850 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C6
+U 1 1 5F52B07F
+P 8700 1150
+F 0 "C6" H 8792 1196 50  0000 L CNN
+F 1 "100n" H 8792 1105 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 8700 1150 50  0001 C CNN
+F 3 "~" H 8700 1150 50  0001 C CNN
+	1    8700 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D6
+U 1 1 5F52B089
+P 8700 1750
+F 0 "D6" H 8800 2050 50  0000 L CNN
+F 1 "WS2812B" H 8850 1450 50  0000 L CNN
+F 2 "Usefull:LED_WS2812B-PLCC4_Handsoldering" H 8750 1450 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 8800 1375 50  0001 L TNN
+	1    8700 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C7
+U 1 1 5F52B093
+P 9550 1150
+F 0 "C7" H 9642 1196 50  0000 L CNN
+F 1 "100n" H 9642 1105 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 9550 1150 50  0001 C CNN
+F 3 "~" H 9550 1150 50  0001 C CNN
+	1    9550 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D7
+U 1 1 5F52B09D
+P 9550 1750
+F 0 "D7" H 9650 2050 50  0000 L CNN
+F 1 "WS2812B" H 9700 1450 50  0000 L CNN
+F 2 "Usefull:LED_WS2812B-PLCC4_Handsoldering" H 9600 1450 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 9650 1375 50  0001 L TNN
+	1    9550 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C8
+U 1 1 5F52B0A7
+P 10400 1150
+F 0 "C8" H 10492 1196 50  0000 L CNN
+F 1 "100n" H 10492 1105 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 10400 1150 50  0001 C CNN
+F 3 "~" H 10400 1150 50  0001 C CNN
+	1    10400 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D8
+U 1 1 5F52B0B1
+P 10400 1750
+F 0 "D8" H 10500 2050 50  0000 L CNN
+F 1 "WS2812B" H 10550 1450 50  0000 L CNN
+F 2 "Usefull:LED_WS2812B-PLCC4_Handsoldering" H 10450 1450 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 10500 1375 50  0001 L TNN
+	1    10400 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C9
+U 1 1 5F5396B1
+P 4450 2750
+F 0 "C9" H 4542 2796 50  0000 L CNN
+F 1 "100n" H 4542 2705 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 4450 2750 50  0001 C CNN
+F 3 "~" H 4450 2750 50  0001 C CNN
+	1    4450 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D9
+U 1 1 5F5396BB
+P 4450 3300
+F 0 "D9" H 4550 3600 50  0000 L CNN
+F 1 "WS2812B" H 4600 3000 50  0000 L CNN
+F 2 "Usefull:LED_WS2812B-PLCC4_Handsoldering" H 4500 3000 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 4550 2925 50  0001 L TNN
+	1    4450 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C10
+U 1 1 5F5396C5
+P 5300 2750
+F 0 "C10" H 5392 2796 50  0000 L CNN
+F 1 "100n" H 5392 2705 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 5300 2750 50  0001 C CNN
+F 3 "~" H 5300 2750 50  0001 C CNN
+	1    5300 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D10
+U 1 1 5F5396CF
+P 5300 3300
+F 0 "D10" H 5400 3600 50  0000 L CNN
+F 1 "WS2812B" H 5450 3000 50  0000 L CNN
+F 2 "Usefull:LED_WS2812B-PLCC4_Handsoldering" H 5350 3000 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 5400 2925 50  0001 L TNN
+	1    5300 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C11
+U 1 1 5F5396D9
+P 6150 2750
+F 0 "C11" H 6242 2796 50  0000 L CNN
+F 1 "100n" H 6242 2705 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 6150 2750 50  0001 C CNN
+F 3 "~" H 6150 2750 50  0001 C CNN
+	1    6150 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D11
+U 1 1 5F5396E3
+P 6150 3300
+F 0 "D11" H 6250 3600 50  0000 L CNN
+F 1 "WS2812B" H 6300 3000 50  0000 L CNN
+F 2 "Usefull:LED_WS2812B-PLCC4_Handsoldering" H 6200 3000 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 6250 2925 50  0001 L TNN
+	1    6150 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C12
+U 1 1 5F5396ED
+P 7000 2750
+F 0 "C12" H 7092 2796 50  0000 L CNN
+F 1 "100n" H 7092 2705 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 7000 2750 50  0001 C CNN
+F 3 "~" H 7000 2750 50  0001 C CNN
+	1    7000 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D12
+U 1 1 5F5396F7
+P 7000 3300
+F 0 "D12" H 7100 3600 50  0000 L CNN
+F 1 "WS2812B" H 7150 3000 50  0000 L CNN
+F 2 "Usefull:LED_WS2812B-PLCC4_Handsoldering" H 7050 3000 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 7100 2925 50  0001 L TNN
+	1    7000 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C13
+U 1 1 5F539701
+P 7850 2750
+F 0 "C13" H 7942 2796 50  0000 L CNN
+F 1 "100n" H 7942 2705 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 7850 2750 50  0001 C CNN
+F 3 "~" H 7850 2750 50  0001 C CNN
+	1    7850 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D13
+U 1 1 5F53970B
+P 7850 3300
+F 0 "D13" H 7950 3600 50  0000 L CNN
+F 1 "WS2812B" H 8000 3000 50  0000 L CNN
+F 2 "Usefull:LED_WS2812B-PLCC4_Handsoldering" H 7900 3000 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 7950 2925 50  0001 L TNN
+	1    7850 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C14
+U 1 1 5F539715
+P 8700 2750
+F 0 "C14" H 8792 2796 50  0000 L CNN
+F 1 "100n" H 8792 2705 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 8700 2750 50  0001 C CNN
+F 3 "~" H 8700 2750 50  0001 C CNN
+	1    8700 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D14
+U 1 1 5F53971F
+P 8700 3300
+F 0 "D14" H 8800 3600 50  0000 L CNN
+F 1 "WS2812B" H 8850 3000 50  0000 L CNN
+F 2 "Usefull:LED_WS2812B-PLCC4_Handsoldering" H 8750 3000 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 8800 2925 50  0001 L TNN
+	1    8700 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C15
+U 1 1 5F539729
+P 9550 2750
+F 0 "C15" H 9642 2796 50  0000 L CNN
+F 1 "100n" H 9642 2705 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 9550 2750 50  0001 C CNN
+F 3 "~" H 9550 2750 50  0001 C CNN
+	1    9550 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D15
+U 1 1 5F539733
+P 9550 3300
+F 0 "D15" H 9650 3600 50  0000 L CNN
+F 1 "WS2812B" H 9700 3000 50  0000 L CNN
+F 2 "Usefull:LED_WS2812B-PLCC4_Handsoldering" H 9600 3000 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 9650 2925 50  0001 L TNN
+	1    9550 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C16
+U 1 1 5F53973D
+P 10400 2750
+F 0 "C16" H 10492 2796 50  0000 L CNN
+F 1 "100n" H 10492 2705 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 10400 2750 50  0001 C CNN
+F 3 "~" H 10400 2750 50  0001 C CNN
+	1    10400 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D16
+U 1 1 5F539747
+P 10400 3300
+F 0 "D16" H 10500 3600 50  0000 L CNN
+F 1 "WS2812B" H 10550 3000 50  0000 L CNN
+F 2 "Usefull:LED_WS2812B-PLCC4_Handsoldering" H 10450 3000 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 10500 2925 50  0001 L TNN
+	1    10400 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 1750 4150 1750
+Wire Wire Line
+	4750 1750 5000 1750
+Wire Wire Line
+	5600 1750 5850 1750
+Wire Wire Line
+	6450 1750 6700 1750
+Wire Wire Line
+	7300 1750 7550 1750
+Wire Wire Line
+	8150 1750 8400 1750
+Wire Wire Line
+	9000 1750 9250 1750
+Wire Wire Line
+	9850 1750 10100 1750
+Wire Wire Line
+	10700 1750 10950 1750
+Wire Wire Line
+	10950 1750 10950 2400
+Wire Wire Line
+	10950 2400 3850 2400
+Wire Wire Line
+	3850 2400 3850 3300
+Wire Wire Line
+	3850 3300 4150 3300
+Wire Wire Line
+	4750 3300 5000 3300
+Wire Wire Line
+	5600 3300 5850 3300
+Wire Wire Line
+	6450 3300 6700 3300
+Wire Wire Line
+	7300 3300 7550 3300
+Wire Wire Line
+	8150 3300 8400 3300
+Wire Wire Line
+	9000 3300 9250 3300
+Wire Wire Line
+	9850 3300 10100 3300
+Wire Wire Line
+	10900 2100 10900 2350
+Wire Wire Line
+	10900 2350 3700 2350
+Wire Wire Line
+	3700 2350 3700 3700
+Wire Wire Line
+	10400 3700 10400 3600
+Wire Wire Line
+	9550 3600 9550 3700
+Connection ~ 9550 3700
+Wire Wire Line
+	9550 3700 10400 3700
+Wire Wire Line
+	8700 3600 8700 3700
+Connection ~ 8700 3700
+Wire Wire Line
+	8700 3700 9550 3700
+Wire Wire Line
+	7850 3600 7850 3700
+Connection ~ 7850 3700
+Wire Wire Line
+	7850 3700 8700 3700
+Wire Wire Line
+	7000 3600 7000 3700
+Connection ~ 7000 3700
+Wire Wire Line
+	7000 3700 7850 3700
+Wire Wire Line
+	6150 3600 6150 3700
+Wire Wire Line
+	3700 3700 4450 3700
+Connection ~ 6150 3700
+Wire Wire Line
+	6150 3700 7000 3700
+Wire Wire Line
+	5300 3600 5300 3700
+Connection ~ 5300 3700
+Wire Wire Line
+	5300 3700 6150 3700
+Wire Wire Line
+	4450 3600 4450 3700
+Connection ~ 4450 3700
+Wire Wire Line
+	4450 3700 5300 3700
+Wire Wire Line
+	4450 2050 4450 2100
+Connection ~ 4450 2100
+Wire Wire Line
+	4450 2100 5300 2100
+Wire Wire Line
+	5300 2050 5300 2100
+Connection ~ 5300 2100
+Wire Wire Line
+	5300 2100 6150 2100
+Wire Wire Line
+	6150 2050 6150 2100
+Connection ~ 6150 2100
+Wire Wire Line
+	6150 2100 7000 2100
+Wire Wire Line
+	7000 2050 7000 2100
+Connection ~ 7000 2100
+Wire Wire Line
+	7000 2100 7850 2100
+Wire Wire Line
+	7850 2050 7850 2100
+Connection ~ 7850 2100
+Wire Wire Line
+	7850 2100 8700 2100
+Wire Wire Line
+	8700 2050 8700 2100
+Connection ~ 8700 2100
+Wire Wire Line
+	8700 2100 9550 2100
+Wire Wire Line
+	9550 2050 9550 2100
+Connection ~ 9550 2100
+Wire Wire Line
+	9550 2100 10400 2100
+Wire Wire Line
+	10400 2050 10400 2100
+Connection ~ 10400 2100
+Wire Wire Line
+	10400 2100 10900 2100
+Wire Wire Line
+	11000 1350 11000 2450
+Wire Wire Line
+	11000 2450 4000 2450
+Wire Wire Line
+	4000 2450 4000 2950
+Wire Wire Line
+	4000 2950 4450 2950
+Wire Wire Line
+	10400 2950 10400 3000
+Wire Wire Line
+	4450 1450 4450 1350
+Connection ~ 4450 1350
+Wire Wire Line
+	4450 1350 5300 1350
+Wire Wire Line
+	5300 1450 5300 1350
+Connection ~ 5300 1350
+Wire Wire Line
+	5300 1350 6150 1350
+Wire Wire Line
+	6150 1450 6150 1350
+Connection ~ 6150 1350
+Wire Wire Line
+	6150 1350 7000 1350
+Wire Wire Line
+	7000 1450 7000 1350
+Connection ~ 7000 1350
+Wire Wire Line
+	7000 1350 7850 1350
+Wire Wire Line
+	7850 1450 7850 1350
+Connection ~ 7850 1350
+Wire Wire Line
+	7850 1350 8700 1350
+Wire Wire Line
+	8700 1450 8700 1350
+Connection ~ 8700 1350
+Wire Wire Line
+	8700 1350 9550 1350
+Wire Wire Line
+	9550 1450 9550 1350
+Connection ~ 9550 1350
+Wire Wire Line
+	9550 1350 10400 1350
+Wire Wire Line
+	10400 1450 10400 1350
+Connection ~ 10400 1350
+Wire Wire Line
+	10400 1350 11000 1350
+Wire Wire Line
+	10400 2950 10400 2850
+Connection ~ 10400 2950
+Wire Wire Line
+	9550 3000 9550 2950
+Connection ~ 9550 2950
+Wire Wire Line
+	9550 2950 10400 2950
+Wire Wire Line
+	8700 3000 8700 2950
+Connection ~ 8700 2950
+Wire Wire Line
+	8700 2950 9550 2950
+Wire Wire Line
+	7850 3000 7850 2950
+Connection ~ 7850 2950
+Wire Wire Line
+	7850 2950 8700 2950
+Wire Wire Line
+	7000 3000 7000 2950
+Connection ~ 7000 2950
+Wire Wire Line
+	7000 2950 7850 2950
+Wire Wire Line
+	6150 3000 6150 2950
+Connection ~ 6150 2950
+Wire Wire Line
+	6150 2950 7000 2950
+Wire Wire Line
+	5300 3000 5300 2950
+Connection ~ 5300 2950
+Wire Wire Line
+	5300 2950 6150 2950
+Wire Wire Line
+	4450 3000 4450 2950
+Connection ~ 4450 2950
+Wire Wire Line
+	4450 2950 5300 2950
+Wire Wire Line
+	4450 2950 4450 2850
+Wire Wire Line
+	5300 2950 5300 2850
+Wire Wire Line
+	6150 2950 6150 2850
+Wire Wire Line
+	7000 2950 7000 2850
+Wire Wire Line
+	7850 2950 7850 2850
+Wire Wire Line
+	8700 2950 8700 2850
+Wire Wire Line
+	9550 2950 9550 2850
+Wire Wire Line
+	4450 1350 4450 1250
+Wire Wire Line
+	5300 1350 5300 1250
+Wire Wire Line
+	6150 1350 6150 1250
+Wire Wire Line
+	7000 1350 7000 1250
+Wire Wire Line
+	7850 1350 7850 1250
+Wire Wire Line
+	8700 1350 8700 1250
+Wire Wire Line
+	9550 1350 9550 1250
+Wire Wire Line
+	10400 1350 10400 1250
+Wire Wire Line
+	11050 950  11050 2550
+Wire Wire Line
+	11050 2550 10400 2550
+Wire Wire Line
+	4450 2550 4450 2650
+Wire Wire Line
+	4450 1050 4450 950 
+Connection ~ 4450 950 
+Wire Wire Line
+	4450 950  5300 950 
+Wire Wire Line
+	5300 1050 5300 950 
+Connection ~ 5300 950 
+Wire Wire Line
+	5300 950  6150 950 
+Wire Wire Line
+	6150 1050 6150 950 
+Connection ~ 6150 950 
+Wire Wire Line
+	6150 950  7000 950 
+Wire Wire Line
+	7000 1050 7000 950 
+Connection ~ 7000 950 
+Wire Wire Line
+	7000 950  7850 950 
+Wire Wire Line
+	7850 1050 7850 950 
+Connection ~ 7850 950 
+Wire Wire Line
+	7850 950  8700 950 
+Wire Wire Line
+	8700 1050 8700 950 
+Connection ~ 8700 950 
+Wire Wire Line
+	8700 950  9550 950 
+Wire Wire Line
+	9550 1050 9550 950 
+Connection ~ 9550 950 
+Wire Wire Line
+	9550 950  10400 950 
+Wire Wire Line
+	10400 1050 10400 950 
+Connection ~ 10400 950 
+Wire Wire Line
+	10400 950  11050 950 
+Wire Wire Line
+	10400 2650 10400 2550
+Connection ~ 10400 2550
+Wire Wire Line
+	10400 2550 9550 2550
+Wire Wire Line
+	9550 2650 9550 2550
+Connection ~ 9550 2550
+Wire Wire Line
+	9550 2550 8700 2550
+Wire Wire Line
+	8700 2650 8700 2550
+Connection ~ 8700 2550
+Wire Wire Line
+	8700 2550 7850 2550
+Wire Wire Line
+	7850 2650 7850 2550
+Connection ~ 7850 2550
+Wire Wire Line
+	7850 2550 7000 2550
+Wire Wire Line
+	7000 2650 7000 2550
+Connection ~ 7000 2550
+Wire Wire Line
+	7000 2550 6150 2550
+Wire Wire Line
+	6150 2650 6150 2550
+Connection ~ 6150 2550
+Wire Wire Line
+	6150 2550 5300 2550
+Wire Wire Line
+	5300 2650 5300 2550
+Connection ~ 5300 2550
+Wire Wire Line
+	5300 2550 4450 2550
+Wire Wire Line
+	2000 1350 2000 1550
+Wire Wire Line
+	2000 1350 4450 1350
+Wire Wire Line
+	2100 3550 2100 3700
+Wire Wire Line
+	2100 3700 2200 3700
+Wire Wire Line
+	2200 3700 2200 3550
+Wire Wire Line
+	2700 2250 3250 2250
+Wire Wire Line
+	3250 2250 3250 1750
+Wire Wire Line
+	3250 1750 3350 1750
+Wire Wire Line
+	2100 3700 750  3700
+Wire Wire Line
+	750  3700 750  2450
+Wire Wire Line
+	750  950  4450 950 
+Connection ~ 2100 3700
+Wire Wire Line
+	3400 2100 3400 3700
+Wire Wire Line
+	3400 3700 2200 3700
+Wire Wire Line
+	3400 2100 4450 2100
+Connection ~ 2200 3700
+NoConn ~ 10700 3300
+Text Label 2000 1350 0    50   ~ 0
+VCC
+Text Label 2300 3700 0    50   ~ 0
+GND
+NoConn ~ 2100 1550
+$Comp
+L Connector:Barrel_Jack_Switch J1
+U 1 1 5F67278A
+P 1150 5300
+F 0 "J1" H 1207 5617 50  0000 C CNN
+F 1 "Barrel_Jack_Switch" H 1207 5526 50  0000 C CNN
+F 2 "Connect:BARREL_JACK" H 1200 5260 50  0001 C CNN
+F 3 "~" H 1200 5260 50  0001 C CNN
+	1    1150 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:LM1117-3.3 U2
+U 1 1 5F6733A7
+P 2400 4950
+F 0 "U2" H 2400 5192 50  0000 C CNN
+F 1 "LM1117-3.3" H 2400 5101 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-223" H 2400 4950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm1117.pdf" H 2400 4950 50  0001 C CNN
+	1    2400 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 5200 1750 5200
+Text Label 1750 5200 2    50   ~ 0
+VCC12
+$Comp
+L Device:CP C17
+U 1 1 5F5FB8DF
+P 1900 5200
+F 0 "C17" H 2018 5246 50  0000 L CNN
+F 1 "10µF" H 2018 5155 50  0000 L CNN
+F 2 "Capacitors_Tantalum_SMD:CP_Tantalum_Case-A_EIA-3216-18_Hand" H 1938 5050 50  0001 C CNN
+F 3 "~" H 1900 5200 50  0001 C CNN
+	1    1900 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C18
+U 1 1 5F5FDD13
+P 2750 5200
+F 0 "C18" H 2868 5246 50  0000 L CNN
+F 1 "100µF" H 2868 5155 50  0000 L CNN
+F 2 "Capacitors_Tantalum_SMD:CP_Tantalum_Case-C_EIA-6032-28_Hand" H 2788 5050 50  0001 C CNN
+F 3 "~" H 2750 5200 50  0001 C CNN
+	1    2750 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 4950 1750 5200
+Wire Wire Line
+	1750 4950 1900 4950
+Wire Wire Line
+	2400 5250 2400 5400
+Wire Wire Line
+	1900 5050 1900 4950
+Connection ~ 1900 4950
+Wire Wire Line
+	1900 4950 2100 4950
+Wire Wire Line
+	2700 4950 2750 4950
+Text Label 3050 4950 2    50   ~ 0
+VCC33
+Wire Wire Line
+	2750 5350 2750 5400
+Wire Wire Line
+	2750 5400 2400 5400
+Connection ~ 2400 5400
+Wire Wire Line
+	2750 5050 2750 4950
+Connection ~ 2750 4950
+Wire Wire Line
+	2750 4950 3050 4950
+$Comp
+L Raumluftwaechter:SD_Card_mod J2
+U 1 1 5F5F40DA
+P 9900 5250
+F 0 "J2" H 9900 5915 50  0000 C CNN
+F 1 "SD_Card_mod" H 9900 5824 50  0000 C CNN
+F 2 "Usefull:SD_Card_mod_hand_solder" H 9900 5250 50  0001 C CNN
+F 3 "http://portal.fciconnect.com/Comergent//fci/drawing/10067847.pdf" H 9900 5250 50  0001 C CNN
+	1    9900 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 2950 1450 2950
+Wire Wire Line
+	1700 3050 1450 3050
+Text Label 1450 2950 0    50   ~ 0
+SDAA
+Text Label 1450 3050 0    50   ~ 0
+SCLA
+Text Label 4300 6700 2    50   ~ 0
+VCC
+Text Label 2700 7450 0    50   ~ 0
+SCLA
+Text Label 2700 7250 0    50   ~ 0
+SDAB
+Text Label 4350 7450 2    50   ~ 0
+SCLB
+$Comp
+L Raumluftwaechter:SCD30 U4
+U 1 1 5F67E104
+P 4550 5200
+F 0 "U4" H 4608 5765 50  0000 C CNN
+F 1 "SCD30" H 4608 5674 50  0000 C CNN
+F 2 "Usefull:SCD30" H 4550 5200 50  0001 C CNN
+F 3 "" H 4550 5200 50  0001 C CNN
+	1    4550 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 4900 5200 4900
+Wire Wire Line
+	4900 5000 5200 5000
+Wire Wire Line
+	4900 5100 5200 5100
+Wire Wire Line
+	4900 5200 5200 5200
+Wire Wire Line
+	4900 5500 5200 5500
+Text Label 5200 5500 2    50   ~ 0
+GND
+Text Label 5200 5000 2    50   ~ 0
+GND
+Text Label 5200 5100 2    50   ~ 0
+SCLB
+Text Label 5200 5200 2    50   ~ 0
+SDAB
+Text Label 5200 4900 2    50   ~ 0
+VCC33
+NoConn ~ 4900 5300
+NoConn ~ 4900 5400
+Wire Wire Line
+	9000 5250 8600 5250
+Wire Wire Line
+	9000 5450 8950 5450
+Wire Wire Line
+	9000 5550 8600 5550
+Wire Wire Line
+	10800 5350 10900 5350
+Wire Wire Line
+	10900 5350 10900 5450
+Wire Wire Line
+	10900 5650 11150 5650
+Text Label 11150 5650 2    50   ~ 0
+GND
+Wire Wire Line
+	10900 5650 10800 5650
+Connection ~ 10900 5650
+Wire Wire Line
+	10800 5550 10900 5550
+Connection ~ 10900 5550
+Wire Wire Line
+	10900 5550 10900 5650
+Wire Wire Line
+	10800 5450 10900 5450
+Connection ~ 10900 5450
+Wire Wire Line
+	10900 5450 10900 5550
+NoConn ~ 9000 4850
+NoConn ~ 9000 5650
+NoConn ~ 10800 5050
+NoConn ~ 10800 5150
+$Comp
+L 74xx:74LVC125 U6
+U 1 1 5F63D8D4
+P 8200 5350
+F 0 "U6" H 8200 5600 50  0000 C CNN
+F 1 "74LVC125" H 8350 5500 50  0000 C CNN
+F 2 "SMD_Packages:SSOP-14" H 8200 5350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LVC125" H 8200 5350 50  0001 C CNN
+	1    8200 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LVC125 U6
+U 2 1 5F65BBBB
+P 7850 4850
+F 0 "U6" H 7900 5100 50  0000 C CNN
+F 1 "74LVC125" H 8050 5000 50  0000 C CNN
+F 2 "SMD_Packages:SSOP-14" H 7850 4850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LVC125" H 7850 4850 50  0001 C CNN
+	2    7850 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LVC125 U6
+U 3 1 5F65C79A
+P 8100 5900
+F 0 "U6" H 8100 6150 50  0000 C CNN
+F 1 "74LVC125" H 8250 6050 50  0000 C CNN
+F 2 "SMD_Packages:SSOP-14" H 8100 5900 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LVC125" H 8100 5900 50  0001 C CNN
+	3    8100 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LVC125 U6
+U 4 1 5F65DC4A
+P 7350 5750
+F 0 "U6" H 7100 5650 50  0000 C CNN
+F 1 "74LVC125" H 7150 5550 50  0000 C CNN
+F 2 "SMD_Packages:SSOP-14" H 7350 5750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LVC125" H 7350 5750 50  0001 C CNN
+	4    7350 5750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LVC125 U6
+U 5 1 5F65E1C5
+P 9550 6100
+F 0 "U6" V 9700 6050 50  0000 L CNN
+F 1 "74LVC125" V 9300 5900 50  0000 L CNN
+F 2 "SMD_Packages:SSOP-14" H 9550 6100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LVC125" H 9550 6100 50  0001 C CNN
+	5    9550 6100
+	0    1    1    0   
+$EndComp
+Text Label 8600 5450 0    50   ~ 0
+GND
+Text Label 8600 5250 0    50   ~ 0
+VCC33
+Wire Wire Line
+	2700 3250 3050 3250
+Wire Wire Line
+	2700 3150 3050 3150
+Wire Wire Line
+	2700 3050 3050 3050
+Wire Wire Line
+	2700 2950 3050 2950
+Text Label 3050 3250 2    50   ~ 0
+SCK
+Text Label 3050 3150 2    50   ~ 0
+MISO
+Text Label 3050 3050 2    50   ~ 0
+MOSI
+Text Label 3050 2950 2    50   ~ 0
+CS
+Wire Wire Line
+	7850 5100 8050 5100
+Text Label 8050 5100 2    50   ~ 0
+GND
+Wire Wire Line
+	7050 5100 6800 5100
+Text Label 6800 5100 0    50   ~ 0
+MOSI
+Wire Wire Line
+	8400 5050 8400 4850
+Wire Wire Line
+	8200 5600 8450 5600
+Text Label 8450 5600 2    50   ~ 0
+GND
+Wire Wire Line
+	7050 5200 6800 5200
+Text Label 6800 5200 0    50   ~ 0
+SCK
+Wire Wire Line
+	8100 6150 8500 6150
+Wire Wire Line
+	7050 5400 6800 5400
+Text Label 6800 5400 0    50   ~ 0
+CS
+Wire Wire Line
+	8400 5900 8550 5900
+Wire Wire Line
+	8550 5900 8550 4950
+Wire Wire Line
+	7350 6000 7100 6000
+Wire Wire Line
+	8600 5550 8600 6300
+Wire Wire Line
+	7050 5750 6800 5750
+Text Label 6800 5750 0    50   ~ 0
+MISO
+Text Label 7100 6000 0    50   ~ 0
+GND
+Text Label 8500 6150 2    50   ~ 0
+GND
+Text Label 11100 6400 2    50   ~ 0
+GND
+Text Label 10800 5950 2    50   ~ 0
+VCC33
+Wire Wire Line
+	6350 6800 6550 6800
+Text Label 6550 6800 2    50   ~ 0
+GND
+NoConn ~ 6200 7350
+NoConn ~ 6200 7050
+NoConn ~ 1700 1950
+NoConn ~ 1700 2350
+NoConn ~ 1700 2550
+NoConn ~ 1700 2650
+NoConn ~ 1700 2750
+NoConn ~ 1700 2850
+NoConn ~ 1700 3150
+NoConn ~ 1700 3250
+NoConn ~ 2700 2850
+NoConn ~ 2700 2750
+NoConn ~ 2700 2650
+NoConn ~ 2700 2550
+NoConn ~ 2700 2450
+NoConn ~ 2700 2350
+NoConn ~ 2700 2150
+NoConn ~ 2700 2050
+NoConn ~ 2700 1950
+$Comp
+L MCU_Module:Arduino_Nano_v3.x A0
+U 1 1 5F51D21B
+P 2200 2550
+F 0 "A0" H 2200 2800 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 2250 2900 50  0000 C CNN
+F 2 "Modules:Arduino_Nano" H 2200 2550 50  0001 C CIN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 2200 2550 50  0001 C CNN
+	1    2200 2550
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 1550 2300 1500
+Wire Wire Line
+	2300 1500 2550 1500
+Text Label 2550 1500 2    50   ~ 0
+VCC12
+$Comp
+L Connector:Conn_01x04_Female J3
+U 1 1 5FB7A18A
+P 2000 7200
+F 0 "J3" H 2028 7176 50  0000 L CNN
+F 1 "Conn_01x04_Female" H 1500 6900 50  0000 L CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 2000 7200 50  0001 C CNN
+F 3 "~" H 2000 7200 50  0001 C CNN
+	1    2000 7200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 7300 1500 7300
+Wire Wire Line
+	1800 7400 1500 7400
+$Comp
+L Jumper:Jumper_3_Open JP1
+U 1 1 5FBC4ECF
+P 1000 6950
+F 0 "JP1" H 1000 7174 50  0000 C CNN
+F 1 "Jumper_3_Open" H 1000 7083 50  0000 C CNN
+F 2 "Usefull:Solder-Jumper-3_Pads_mirror_L" H 1000 6950 50  0001 C CNN
+F 3 "~" H 1000 6950 50  0001 C CNN
+	1    1000 6950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	750  6950 550  6950
+Wire Wire Line
+	1250 6950 1550 6950
+Text Label 550  6950 0    50   ~ 0
+GND
+Text Label 1500 7100 0    50   ~ 0
+VCC33
+Text Label 1550 6950 2    50   ~ 0
+VCC33
+Text Label 1500 7300 0    50   ~ 0
+SCLB
+Text Label 1500 7400 0    50   ~ 0
+SDAB
+Wire Wire Line
+	1000 7100 1800 7100
+$Comp
+L Jumper:Jumper_3_Open JP2
+U 1 1 5FC1461B
+P 1000 7500
+F 0 "JP2" H 1000 7724 50  0000 C CNN
+F 1 "Jumper_3_Open" H 1000 7633 50  0000 C CNN
+F 2 "Usefull:Solder-Jumper-3_Pads_mirror_L" H 1000 7500 50  0001 C CNN
+F 3 "~" H 1000 7500 50  0001 C CNN
+	1    1000 7500
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	750  7500 550  7500
+Wire Wire Line
+	1250 7500 1350 7500
+Text Label 550  7500 0    50   ~ 0
+GND
+Text Label 1700 7700 2    50   ~ 0
+VCC33
+Text Label 1500 7200 0    50   ~ 0
+GNDD
+Wire Wire Line
+	1000 7350 1000 7200
+Wire Wire Line
+	1000 7200 1800 7200
+$Comp
+L Device:C_Small C21
+U 1 1 5FC72C01
+P 10300 6250
+F 0 "C21" H 10392 6296 50  0000 L CNN
+F 1 "100n" H 10392 6205 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 10300 6250 50  0001 C CNN
+F 3 "~" H 10300 6250 50  0001 C CNN
+	1    10300 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10300 6400 10300 6350
+Text Label 8600 5050 0    50   ~ 0
+SDMOSI
+Text Label 8600 5350 0    50   ~ 0
+SDSCK
+Text Label 8600 5550 0    50   ~ 0
+SDMISO
+Text Label 8600 4950 0    50   ~ 0
+SDCS
+Text Label 4350 7250 2    50   ~ 0
+SDAA
+Text Label 3500 6700 2    50   ~ 0
+VCC33
+Wire Wire Line
+	3200 6700 3050 6700
+Wire Wire Line
+	3050 6700 2950 6700
+Wire Wire Line
+	2950 6700 2950 6750
+Connection ~ 3050 6700
+Wire Wire Line
+	4150 6800 4150 6700
+Wire Wire Line
+	4150 6700 4050 6700
+Wire Wire Line
+	4050 6800 4050 6700
+Wire Wire Line
+	3050 7050 3050 7250
+Wire Wire Line
+	3050 6700 3050 6750
+Wire Wire Line
+	3850 7250 4050 7250
+Wire Wire Line
+	3250 7450 3200 7450
+Wire Wire Line
+	4050 7100 4050 7250
+Connection ~ 4050 7250
+Wire Wire Line
+	4050 7250 4350 7250
+Wire Wire Line
+	2700 7250 3050 7250
+Connection ~ 3050 7250
+Wire Wire Line
+	3050 7250 3250 7250
+Wire Wire Line
+	3850 7450 4000 7450
+Wire Wire Line
+	4000 7450 4000 7650
+Wire Wire Line
+	4000 7650 2950 7650
+Wire Wire Line
+	2950 7650 2950 7050
+Connection ~ 4000 7450
+Wire Wire Line
+	4000 7450 4350 7450
+Wire Wire Line
+	4150 7100 4150 7600
+Wire Wire Line
+	4150 7600 3200 7600
+Wire Wire Line
+	3200 7600 3200 7450
+Connection ~ 3200 7450
+Wire Wire Line
+	3200 7450 2700 7450
+Wire Wire Line
+	3850 7350 3900 7350
+Wire Wire Line
+	3250 7350 3200 7350
+Wire Wire Line
+	3200 7350 3200 6700
+Wire Wire Line
+	3900 7350 3900 6700
+Connection ~ 4150 6700
+Wire Wire Line
+	4150 6700 4300 6700
+Connection ~ 3200 6700
+Wire Wire Line
+	3200 6700 3900 6700
+$Comp
+L Device:R R2
+U 1 1 5F71FD81
+P 2950 6900
+F 0 "R2" V 2950 6900 50  0000 C CNN
+F 1 "2K" V 3050 6900 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 2880 6900 50  0001 C CNN
+F 3 "~" H 2950 6900 50  0001 C CNN
+	1    2950 6900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5F7208AF
+P 3050 6900
+F 0 "R3" V 3050 6900 50  0000 C CNN
+F 1 "2K" V 2934 6900 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 2980 6900 50  0001 C CNN
+F 3 "~" H 3050 6900 50  0001 C CNN
+	1    3050 6900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5F7212EA
+P 4050 6950
+F 0 "R4" V 4050 6950 50  0000 C CNN
+F 1 "2K" V 4150 6950 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 3980 6950 50  0001 C CNN
+F 3 "~" H 4050 6950 50  0001 C CNN
+	1    4050 6950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5F721631
+P 4150 6950
+F 0 "R5" V 4150 6950 50  0000 C CNN
+F 1 "2K" V 4050 6950 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 4080 6950 50  0001 C CNN
+F 3 "~" H 4150 6950 50  0001 C CNN
+	1    4150 6950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5F81F805
+P 1200 1350
+F 0 "R6" V 993 1350 50  0000 C CNN
+F 1 "10K" V 1084 1350 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 1130 1350 50  0001 C CNN
+F 3 "~" H 1200 1350 50  0001 C CNN
+	1    1200 1350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2000 1350 1350 1350
+Connection ~ 2000 1350
+Wire Wire Line
+	1050 1350 900  1350
+Wire Wire Line
+	900  1350 900  2050
+Wire Wire Line
+	900  2050 1000 2050
+Wire Wire Line
+	1000 2450 750  2450
+Connection ~ 750  2450
+Wire Wire Line
+	750  2450 750  950 
+Wire Wire Line
+	1000 2050 1700 2050
+$Comp
+L Switch:SW_Push SW1
+U 1 1 5F8B1FE2
+P 1000 2250
+F 0 "SW1" V 954 2398 50  0000 L CNN
+F 1 "SW_Push" V 1045 2398 50  0000 L CNN
+F 2 "Buttons_Switches_SMD:SW_SPST_TL3342" H 1000 2450 50  0001 C CNN
+F 3 "~" H 1000 2450 50  0001 C CNN
+	1    1000 2250
+	0    1    1    0   
+$EndComp
+Connection ~ 1000 2050
+$Comp
+L Device:R_Pack04 RN1
+U 1 1 5F9781B9
+P 7250 5300
+F 0 "RN1" V 6833 5300 50  0000 C CNN
+F 1 "R_Pack04" V 6924 5300 50  0000 C CNN
+F 2 "Resistors_SMD:R_Array_Convex_4x0603" V 7525 5300 50  0001 C CNN
+F 3 "~" H 7250 5300 50  0001 C CNN
+	1    7250 5300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7500 4850 7500 5100
+Wire Wire Line
+	7500 5100 7450 5100
+Wire Wire Line
+	7500 4850 7550 4850
+Wire Wire Line
+	7450 5400 7800 5400
+Wire Wire Line
+	6750 6300 6750 5300
+Wire Wire Line
+	6750 6300 8600 6300
+Wire Wire Line
+	8150 4850 8400 4850
+Wire Wire Line
+	7700 5750 7700 5300
+Wire Wire Line
+	7650 5750 7700 5750
+Wire Wire Line
+	7800 5400 7800 5900
+Wire Wire Line
+	7050 5300 6750 5300
+Wire Wire Line
+	7700 5300 7450 5300
+Wire Wire Line
+	8550 4950 9000 4950
+Wire Wire Line
+	8400 5050 9000 5050
+Wire Wire Line
+	9000 5150 8950 5150
+Wire Wire Line
+	8950 5150 8950 5450
+Connection ~ 8950 5450
+Wire Wire Line
+	8950 5450 8600 5450
+Wire Wire Line
+	10300 6150 10300 6100
+Text Notes 550  6650 0    100  ~ 20
+solder jumper for differ. \nOLED display power pin\nconfigurations
+Text Notes 6650 4550 0    100  ~ 20
+SD-Card slot (SPI) with level shifter
+Wire Wire Line
+	8500 5350 9000 5350
+Wire Wire Line
+	10300 5950 10800 5950
+Wire Wire Line
+	10300 6400 11100 6400
+Wire Wire Line
+	10300 6400 9050 6400
+Wire Wire Line
+	9050 6400 9050 6100
+Connection ~ 10300 6400
+Wire Wire Line
+	10050 6100 10300 6100
+Connection ~ 10300 6100
+Wire Wire Line
+	10300 6100 10300 5950
+Text Notes 2900 6450 0    100  ~ 20
+I2C level shifter for \nSCD30 & RTC
+Wire Wire Line
+	1900 5400 1900 5350
+Wire Wire Line
+	2400 5400 1900 5400
+Text Label 1750 5400 2    50   ~ 0
+GND
+Wire Wire Line
+	1450 5400 1500 5400
+Connection ~ 1900 5400
+Wire Wire Line
+	1500 5400 1500 5300
+Wire Wire Line
+	1500 5300 1450 5300
+Connection ~ 1500 5400
+Wire Wire Line
+	1500 5400 1900 5400
+Text Notes 4950 6300 0    100  ~ 20
+RTC with battery (I2C)
+Wire Wire Line
+	4950 6650 5150 6650
+Wire Wire Line
+	5600 6650 5350 6650
+NoConn ~ 5200 7450
+Wire Wire Line
+	5700 6800 6050 6800
+Text Label 4950 6650 0    50   ~ 0
+GND
+Connection ~ 5600 6650
+$Comp
+L Device:C_Small C22
+U 1 1 5F940121
+P 5250 6650
+F 0 "C22" V 5100 6700 50  0000 L CNN
+F 1 "100n" V 5200 6700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 5250 6650 50  0001 C CNN
+F 3 "~" H 5250 6650 50  0001 C CNN
+	1    5250 6650
+	0    1    1    0   
+$EndComp
+Text Label 5950 7700 2    50   ~ 0
+GND
+Wire Wire Line
+	5700 7700 5950 7700
+Wire Wire Line
+	5700 7650 5700 7700
+Text Label 5900 6650 2    50   ~ 0
+VCC33
+Wire Wire Line
+	5600 6650 5900 6650
+Wire Wire Line
+	5600 6850 5600 6650
+Text Label 5900 6800 2    50   ~ 0
+VCCB
+Wire Wire Line
+	5700 6850 5700 6800
+Text Label 4950 7150 0    50   ~ 0
+SDAB
+Text Label 4950 7050 0    50   ~ 0
+SCLB
+Wire Wire Line
+	5200 7150 4950 7150
+Wire Wire Line
+	5200 7050 4950 7050
+$Comp
+L Timer_RTC:DS3231M U5
+U 1 1 5F670339
+P 5700 7250
+F 0 "U5" H 5350 6850 50  0000 C CNN
+F 1 "DS3231M" H 5700 7250 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-16W_7.5x10.3mm_Pitch1.27mm" H 5700 6650 50  0001 C CNN
+F 3 "http://datasheets.maximintegrated.com/en/ds/DS3231.pdf" H 5970 7300 50  0001 C CNN
+	1    5700 7250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Battery_Cell BT1
+U 1 1 5F67174C
+P 6250 6800
+F 0 "BT1" V 6200 6900 50  0000 L CNN
+F 1 "Battery_Cell" V 6400 6600 50  0000 L CNN
+F 2 "Usefull:CR1220_mod" V 6250 6860 50  0001 C CNN
+F 3 "~" V 6250 6860 50  0001 C CNN
+	1    6250 6800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1700 7700 1350 7700
+Wire Wire Line
+	1350 7700 1350 7500
+Text Notes 1000 2000 0    50   ~ 0
+Reset SW
+Text Notes 4350 800  0    100  ~ 20
+16x LED array
+Text Notes 1400 800  0    100  ~ 20
+Arduino Nano V3.x
+Text Notes 800  4550 0    100  ~ 20
+dc power socket & 3.3V regulator
+Text Notes 800  4850 0    100  ~ 20
+5.5 / 2.1
+Text Notes 4200 4550 0    100  ~ 20
+CO2 sensor SCD30 (I2C)
+Wire Wire Line
+	7450 5200 7800 5200
+Wire Wire Line
+	7800 5200 7800 5350
+Wire Wire Line
+	7800 5350 7900 5350
+$Comp
+L Raumluftwaechter:BSS138BKS Q1
+U 1 1 5F750E98
+P 3550 7350
+F 0 "Q1" H 3550 7350 50  0000 C CNN
+F 1 "BSS138BKS" H 3550 7650 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-363_SC-70-6_Handsoldering" H 3560 6965 50  0001 C CNN
+F 3 "" H 3550 7350 50  0001 C CNN
+	1    3550 7350
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
