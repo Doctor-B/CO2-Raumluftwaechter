@@ -2,7 +2,7 @@
   This software bases on the example "Reading CO2, humidity and temperature from the SCD30" by Nathan Seidle, SparkFun Electronics
   By: Dr. Andreas Beck
   Gymnasium Kirn
-  Date: 05.Feb.2021
+  Date: 14.Feb.2021
   License: MIT. See license file for more information but you can
   basically do whatever you want with this code.
   Hardware Connections:
@@ -36,9 +36,10 @@ const int chipSelect = 10;
 //#define DEBUG     // enables debug mode by using extensive serial monitor
 //#define NOC       // no calibration / autocalibration is disabled
 
-#define CO2VERSION  "CO2-Raumluftwaecher V0.63"
-#define VERSION     63    // version number for displaying over LED ring
-#define CO2OFFSET   0     // if necessary you can 
+#define CO2VERSION  "CO2-Raumluftwaecher V"
+#define MAINVERSION 0
+#define SUBVERSION  64    // version number for displaying over LED ring
+#define CO2OFFSET   -110      // if necessary you can add here an offset for meassured co2 values
 #define PTRS        3     // number of single meassured CO2 values for averaging 
 #define LED_PIN     3     // Arduino pin no. for LED
 #define NUM_LEDS    16    // number of the used LEDs in the design
@@ -54,7 +55,6 @@ U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);
 #endif
 
 
-const int trans[16] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}; //no translation of LED position in array //int trans[16] = {8, 7, 6 ,5 ,4 ,3 ,2 ,1 ,0, 15, 14, 13, 12, 11, 10, 9}; //translate table for different LED-RING and numbring 
 const int lum = 1;      // declare const brightness (luminosity) level 1 (dark) to 8 (bright); 1 is for the most cases suitable
 int aval = 0;           // average CO2 value
 int oldco2level = 0, co2level = 0;    //CO2 levels actual and old one
@@ -71,14 +71,19 @@ int timer, heartbeat = 0;             // declare variables vor timer (time count
  ***********************************************************************/
 void setup( void)
 {
-int i;
+int i, j;
 
   #if ( defined SOP) || ( defined DEBUG)  // set up serial connection 115200 Baud
   Serial.begin(115200);
-  Serial.println(F(CO2VERSION));
+  Serial.print(F(CO2VERSION));
+  Serial.print(MAINVERSION);
+  Serial.print(F("."));
+  Serial.println(SUBVERSION);
   Serial.print(F("CO2-Offset: "));
   Serial.println(CO2OFFSET);
-  #endif
+
+//  #if ( defined SOP) || ( defined DEBUG)  // set up serial connection 115200 Baud
+ #endif
 
   #ifdef SDCARD // see if the card is present and can be initialized:
   #if ( defined  SOP) || ( defined DEBUG)
@@ -156,10 +161,88 @@ int i;
   fname += String(10);
   fname += String(01);
   #endif
-  
+
+  // init all LEDs
   FastLED.addLeds<WS2812, LED_PIN, GRB>(leds, NUM_LEDS);
 
-  delay(500);      // 0.5 Sekunden warten bevor der CO2-Sensor angesprochen wird
+  // show on all LEDs white
+  for( i = 0; i < 16; i++) {
+    leds[i] = CRGB(lum, lum, lum);  
+    //leds[trans[i]] = CRGB(0, 0, 0);  
+  }
+  FastLED.show();
+
+  delay(2000);      // wait 2 seconds before version number and correctin value is shown
+
+  // main version number is shown on leds[0] = D1: blue(b) = 0; rg = 1; rb = 2; gb = 3; else: black
+  switch ( MAINVERSION) { 
+    case 0: leds[0] = CRGB( 0, 0, lum); break;    // main version number: 0 blue (b)
+    case 1: leds[0] = CRGB( lum, lum, 0); break;  // main version number: 0 red green: yellow (rg)
+    case 2: leds[0] = CRGB( lum, 0, lum); break;    // main version number: 0 red blue: violet (rb)
+    case 3: leds[0] = CRGB( 0, lum, lum); break;    // main version number: 0 green blue: cyan blue (gb)
+    default: leds[0] = CRGB( 0, 0, 0); break;   // main version number: unknown - black
+  }
+
+  
+  // show sub version number leds[1 to 7] in white D2-7
+  j = SUBVERSION;
+  for( i = 1; i < 8; i++) {
+    if( j & 1) {
+      leds[i] = CRGB(lum, lum, lum);  
+    } else {
+      leds[i] = CRGB(0, 0, 0);
+    }
+    j = j >> 1;
+  }
+//  for( i = 1; i < 8; i++) {
+//    if( vc[i] > 0 ) {
+//      leds[i] = CRGB(lum, lum, lum);  
+//    } else {
+//      leds[i] = CRGB(0, 0, 0);
+//    }
+//  }
+
+  // show correction value on leds[8 to 15] negative in red and positive in green D9-D16 starting with Bit 1 and not 0
+  j = abs( CO2OFFSET);
+  for( i = 8; i < 16; i++) {
+     j = j >> 1;
+    if( j & 1 ) {
+      if( CO2OFFSET > 0) {
+        leds[i] = CRGB(0, lum, 0);
+      } else {  
+        leds[i] = CRGB(lum, 0, 0); 
+      }
+    } else {
+      leds[i] = CRGB(0, 0, 0);
+    }
+  }
+  
+//  for( i = 8; i < 16; i++) {
+//    if( CO2OFFSET > 0) {
+//      if( vc[i] > 0 ) {
+//        leds[i] = CRGB(0, lum, 0);  
+//      } else {
+//        leds[i] = CRGB(0, 0, 0);
+//      }
+//    } else {
+//      if( vc[i] > 0 ) {
+//        leds[i] = CRGB(lum, 0, 0);  
+//      } else {
+//        leds[i] = CRGB(0, 0, 0);
+//      }
+//    }
+//  }
+  FastLED.show();
+
+  
+  delay(4000);      // wait 2 seconds before init of CO2 sensor 
+
+  // clear all LEDs
+   for( i = 0; i < 16; i++) {
+    leds[i] = CRGB(0, 0, 0);  
+    //leds[trans[i]] = CRGB(0, 0, 0);  
+  }
+  FastLED.show();
 
   Serial.println(F("Sensor Init"));
 
@@ -176,8 +259,8 @@ int i;
       
       if( timer >= 3) {
         for( i = 1; i < 16; i+=2) {
-          leds[trans[i]] = CRGB(32*lum, 0, 0);
-          leds[trans[i+1]] = CRGB(32*lum, 0, 0);
+          leds[i] = CRGB(32*lum, 0, 0);
+          leds[i+1] = CRGB(32*lum, 0, 0);
         }   
         FastLED.show();
         #ifdef SOP
@@ -193,9 +276,9 @@ int i;
 
   timer = 0;
 
-  leds[trans[0]] = CRGB(0, 12*lum, 0);     //CRGB(0, 6*lum, 0);
+  leds[0] = CRGB(0, 12*lum, 0);     //CRGB(0, 6*lum, 0);
   for( i = 1; i < 16; i++) {
-    leds[trans[i]] = CRGB(0, 0, 0);  
+    leds[i] = CRGB(0, 0, 0);  
   }
   FastLED.show();
 
@@ -320,16 +403,16 @@ static int oldlevel = 0, led0 = 0; // the old CO2 level and heart beat of LED 0 
       for( i = 0; i <= g; i++) {
         if( i == 0) {
           if( heartbeat != 0) {
-            leds[trans[i]] = CRGB( 0, 2*lum, 0);  //CRGB( 0, 12*lum, 0);
+            leds[i] = CRGB( 0, 2*lum, 0);  //CRGB( 0, 12*lum, 0);
           } else {
-            leds[trans[i]] = CRGB( 0, 12*lum, 0);  //CRGB( 0, 12*lum, 0)
+            leds[i] = CRGB( 0, 12*lum, 0);  //CRGB( 0, 12*lum, 0)
           }
         } else {
-          leds[trans[i]] = CRGB( 0, 12*lum, 0);  //CRGB( 0, 12*lum, 0); 
+          leds[i] = CRGB( 0, 12*lum, 0);  //CRGB( 0, 12*lum, 0); 
         }
       }
       for(  i = (g + o + 1); i <= 15; i ++) {
-        leds[trans[i]] = CRGB( 0, 0, 0); 
+        leds[i] = CRGB( 0, 0, 0); 
       }
     }
         
@@ -340,12 +423,12 @@ static int oldlevel = 0, led0 = 0; // the old CO2 level and heart beat of LED 0 
       for( i = (g + 1); i <= (g + o); i++) {
         if( i == 0) {
           if( heartbeat == 0) {
-            leds[trans[i]] = CRGB( 10*lum, 4*lum, 0); //CRGB( 32*lum, 16*lum, 0); 
+            leds[i] = CRGB( 10*lum, 4*lum, 0); //CRGB( 32*lum, 16*lum, 0); 
           } else {
-            leds[trans[i]] = CRGB( 32*lum, 16*lum, 0); //CRGB( 32*lum, 16*lum, 0); 
+            leds[i] = CRGB( 32*lum, 16*lum, 0); //CRGB( 32*lum, 16*lum, 0); 
           }
         } else {
-          leds[trans[i]] = CRGB( 32*lum, 16*lum, 0); //CRGB( 32*lum, 16*lum, 0); 
+          leds[i] = CRGB( 32*lum, 16*lum, 0); //CRGB( 32*lum, 16*lum, 0); 
         }
       }
       
@@ -354,12 +437,12 @@ static int oldlevel = 0, led0 = 0; // the old CO2 level and heart beat of LED 0 
       for( i = (o + 1); i <= (o + r + 1); i++) {
         if( i == 0) {
           if( heartbeat == 0) {
-            leds[trans[i]] = CRGB( 10*lum, 0, 0); //CRGB( 32*lum, 16*lum, 0); 
+            leds[i] = CRGB( 10*lum, 0, 0); //CRGB( 32*lum, 16*lum, 0); 
           } else {
-            leds[trans[i]] = CRGB( 32*lum, 0, 0); //CRGB( 32*lum, 16*lum, 0); 
+            leds[i] = CRGB( 32*lum, 0, 0); //CRGB( 32*lum, 16*lum, 0); 
           }
         } else {
-          leds[trans[i]] = CRGB( 32*lum, 0, 0); //CRGB( 32*lum, 16*lum, 0); 
+          leds[i] = CRGB( 32*lum, 0, 0); //CRGB( 32*lum, 16*lum, 0); 
         }
       }
       
@@ -367,21 +450,21 @@ static int oldlevel = 0, led0 = 0; // the old CO2 level and heart beat of LED 0 
     
   } else if ( led0 == 0) {
     if( heartbeat != 0) {
-      leds[trans[0]] = CRGB( 0, 2*lum, 0);  //CRGB( 0, 12*lum, 0);
+      leds[0] = CRGB( 0, 2*lum, 0);  //CRGB( 0, 12*lum, 0);
     } else {
-      leds[trans[0]] = CRGB( 0, 12*lum, 0);  //CRGB( 0, 12*lum, 0)
+      leds[0] = CRGB( 0, 12*lum, 0);  //CRGB( 0, 12*lum, 0)
     }
   } else if ( led0 == 1) {
     if( heartbeat == 0) {
-      leds[trans[0]] = CRGB( 10*lum, 4*lum, 0); //CRGB( 32*lum, 16*lum, 0); 
+      leds[0] = CRGB( 10*lum, 4*lum, 0); //CRGB( 32*lum, 16*lum, 0); 
     } else {
-      leds[trans[0]] = CRGB( 32*lum, 16*lum, 0); //CRGB( 32*lum, 16*lum, 0); 
+      leds[0] = CRGB( 32*lum, 16*lum, 0); //CRGB( 32*lum, 16*lum, 0); 
     }
   } else if ( led0 == 2) {
     if( heartbeat == 0) {
-      leds[trans[i]] = CRGB( 10*lum, 0, 0); //CRGB( 32*lum, 16*lum, 0); 
+      leds[i] = CRGB( 10*lum, 0, 0); //CRGB( 32*lum, 16*lum, 0); 
     } else {
-      leds[trans[i]] = CRGB( 32*lum, 0, 0); //CRGB( 32*lum, 16*lum, 0); 
+      leds[i] = CRGB( 32*lum, 0, 0); //CRGB( 32*lum, 16*lum, 0); 
     }
   }
 
