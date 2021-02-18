@@ -6,7 +6,7 @@ Der CO2-Raumluftwächter misst mit Hilfe des SCD30 von Sensirion den CO2-Gehalt 
 * Trägerplatine
 * Arduino nano V3 _[THT]_
 * SCD30 _[THT]_
-* WS2812b LED Ring mit 16 LEDs als Anzeige _[SMD]_
+* WS2812b LED Ring mit 16 LEDs als Anzeige mit 100nF Abblockondensatoren _[SMD]_
 * Levelshifter BSS138BKSH _[SMD]_
 * (optional) SD-Card Slot mit Echtzeituhr DS3231 mit Batteriepufferung CR1220 _[SMD]_
 * (optional) I2C OLED Display 128 x 64 (VCC GND vertauschbar per Lötbrücke) _[THT]_
