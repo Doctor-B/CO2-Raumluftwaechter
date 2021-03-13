@@ -2,7 +2,7 @@
   This software bases on the example "Reading CO2, humidity and temperature from the SCD30" by Nathan Seidle, SparkFun Electronics
   By: Dr. Andreas Beck
   Gymnasium Kirn
-  Date: 14.Feb.2021
+  Date: 19.Feb.2021
   License: MIT. See license file for more information but you can
   basically do whatever you want with this code.
   Hardware Connections:
@@ -11,7 +11,7 @@
 */
 
 /* n.b. With activated OLED-Display the Arduino hangs up. Only a hard reset by pulling the power cable will help. 
-        Without an attached OLED-Display the CO2-Raumluftwaechter works mostly without any flaws and crashes over days.  */
+        Without an attached OLED-Display the CO2-Raumluftwaechter works mostly without any flaws and doesn't crash over days.  */
 
 #include <Arduino.h>
 #include <Wire.h>
@@ -35,11 +35,13 @@ const int chipSelect = 10;
 //#define SDCARD    // SDCARD enable
 //#define DEBUG     // enables debug mode by using extensive serial monitor
 //#define NOC       // no calibration / autocalibration is disabled
+#define DEVNO     // show device number
 
 #define CO2VERSION  "CO2-Raumluftwaecher V"
-#define MAINVERSION 0
-#define SUBVERSION  64    // version number for displaying over LED ring
-#define CO2OFFSET   -110      // if necessary you can add here an offset for meassured co2 values
+#define MAINVERSION 0     // main version number: will be shown on LED D1 as colour code [blue(b) = 0; rg = 1; rb = 2; gb = 3; else: black]
+#define SUBVERSION  65    // version number for displaying over LED ring [1..99]
+#define DEVICE_NO   28     // device number for better administration of different installed sensors [1..x]
+#define CO2OFFSET   40     // if necessary you can add here an offset for meassured co2 values
 #define PTRS        3     // number of single meassured CO2 values for averaging 
 #define LED_PIN     3     // Arduino pin no. for LED
 #define NUM_LEDS    16    // number of the used LEDs in the design
@@ -63,7 +65,7 @@ int cday, cmonth, cyear;              // declare day, month and year for RTC
 static DS3231 RTC;                    // declare RTC
 #endif
 String fname = "";                    // declare filename
-int timer, heartbeat = 0;             // declare variables vor timer (time counter between two meassured CO2 values) und heartbeat counter
+int timer, heartbeat = 0;             // declare variables for timer (time counter between two meassured CO2 values) and heartbeat counter
 
 
 /***********************************************************************
@@ -165,14 +167,30 @@ int i, j;
   // init all LEDs
   FastLED.addLeds<WS2812, LED_PIN, GRB>(leds, NUM_LEDS);
 
-  // show on all LEDs white
+  // show on all LEDs white: test for all LEDs
   for( i = 0; i < 16; i++) {
     leds[i] = CRGB(lum, lum, lum);  
     //leds[trans[i]] = CRGB(0, 0, 0);  
   }
   FastLED.show();
 
+  delay(2000);      // wait 2 seconds 
+
+  // show device number
+  #ifdef DEVNO
+  j = DEVICE_NO;
+  for( i = 0; i < 16; i++) {
+    if( j & 1) {
+      leds[i] = CRGB( lum, lum, lum);  
+    } else {
+      leds[i] = CRGB(0, 0, 0);
+    }
+    j = j >> 1;
+  }
+  FastLED.show();
+
   delay(2000);      // wait 2 seconds before version number and correctin value is shown
+  #endif
 
   // main version number is shown on leds[0] = D1: blue(b) = 0; rg = 1; rb = 2; gb = 3; else: black
   switch ( MAINVERSION) { 
