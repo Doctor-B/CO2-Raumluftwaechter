@@ -12,6 +12,9 @@ Der CO2-Raumluftwächter misst mit Hilfe des SCD30 von Sensirion den CO2-Gehalt 
 * (optional) I2C OLED Display 128 x 64 (VCC GND auf Pin 1 und 2 vertauschbar per Lötbrücke) _[THT]_
 * (optional) SD-Card Slot _[SMD]_
 
+# Aufbau mit interaktiven BOM
+Mit Hilfe der [interaktiven BOM](https://htmlpreview.github.io/?https://github.com/Doctor-B/CO2-Raumluftwaechter/blob/main/PCB/KiCAD_RaumluftWaechter_V1.00_CC_BY-NC-SA_4.0/bom/ibom.html) ist es einfach, einen Überblick über die Bauteile und das Bestücken des Raumluftwächters zu behalten.
+
 # License ![CC BY-NC-SA 4.0 Logo](/Bilder/CC_BY-NC-SA.png)
 
 The contents of this repository is released under the following license:
